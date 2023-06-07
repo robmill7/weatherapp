@@ -23,7 +23,7 @@ function App() {
     const fetchWeather = async () => {
       const message = query.q ? query.q : 'current location.'
 
-      toast.info('Fetching weather for' + message);
+      toast.info('Fetching weather for' + ' ' + message);
 
        await getFormattedWeatherData({...query, units}).then(
         (data) =>{
@@ -56,11 +56,11 @@ return(
       <div>
         <TimAndLocation weather = {weather}/>
     <TemperaturAndDetails weather = {weather}/>
-    <Forcast title='hourly forcast' items ={weather.main}/>
-    <Forcast title='daily forcast' items ={weather.hourly}/>
+    {/* <Forcast title='hourly forcast' items ={weather.main}/>
+    <Forcast title='daily forcast' items ={weather.hourly}/> */}
       </div>
     )}
-    <ToastContainer autoClose={5000} theme='colored' newestOnTop={true} />
+    <ToastContainer autoClose={3000} theme='colored' newestOnTop={true} />
     
 
   </div>
