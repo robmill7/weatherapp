@@ -1,10 +1,10 @@
 import './App.css';
-import UilReact from '@iconscout/react-unicons/icons/uil-react'
+//import UilReact from '@iconscout/react-unicons/icons/uil-react'
 import TopButtons from './components/TopButtons';
 import Inputs from './components/Inputs';
 import TimAndLocation from './components/TimAndLocation';
 import TemperaturAndDetails from './components/TemperaturAndDetails';
-import Forcast from './components/Forcast';
+//import Forcast from './components/Forcast';
 import getFormattedWeatherData from './services/weatherService';
 import {useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
@@ -23,7 +23,7 @@ function App() {
     const fetchWeather = async () => {
       const message = query.q ? query.q : 'current location.'
 
-      toast.info('Fetching weather for' + ' ' + message);
+      toast.info(`'Fetching weather for ${message}`);
 
        await getFormattedWeatherData({...query, units}).then(
         (data) =>{

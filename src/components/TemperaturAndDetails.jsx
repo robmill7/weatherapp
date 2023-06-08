@@ -1,7 +1,7 @@
 import React from 'react'
 import {
-    UilArrowUp,
-    UilArrowDown,
+    // UilArrowUp,
+    // UilArrowDown,
     UilTemperature,
     UilTear,
     UilWind,
